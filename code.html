@@ -1,0 +1,147 @@
+<!DOCTYPE html><html class="h-full w-full" lang="vi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<title>Birthday Party Invitation</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&amp;family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&amp;family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"><style>@keyframes luxuryTextShimmer { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } } .text-luxury-shimmer { background: linear-gradient(110deg, #3d2b15 0%, #8c6729 25%, #f7df96 50%, #8c6729 75%, #3d2b15 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: luxuryTextShimmer 6s ease-in-out infinite; } .font-cinzel { font-family: 'Cinzel Decorative', 'Playfair Display', serif; }</style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#8e4e14",
+            "primary-container": "#f4a261",
+            "surface": "#fff8f5",
+            "surface-container": "#f3ecea",
+            "surface-container-high": "#ede7e4",
+            "on-surface": "#1d1b1a",
+            "on-surface-variant": "#534439",
+            "outline-variant": "#d8c2b5"
+          },
+          fontFamily: {
+            "serif-display": ["Playfair Display", "serif"],
+            "sans-body": ["Plus Jakarta Sans", "Be Vietnam Pro", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      background-color: #fffcf8;
+      color: #1d1b1a;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .pb-safe { padding-bottom: max(env(safe-area-inset-bottom, 0px), 16px); }
+    .pt-safe { padding-top: max(env(safe-area-inset-top, 0px), 16px); }
+
+    /* Subtle luxury animations */
+    @keyframes avatarBreath {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-4px) scale(1.02); }
+    }
+
+    @keyframes goldHaloPulse {
+      0%, 100% { opacity: 0.65; transform: scale(0.97); filter: blur(8px); }
+      50% { opacity: 0.95; transform: scale(1.05); filter: blur(12px); }
+    }
+
+    @keyframes twinkleSoft {
+      0%, 100% { opacity: 0.3; transform: scale(0.85); }
+      50% { opacity: 1; transform: scale(1.25); }
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) translateX(0px); }
+      50% { transform: translateY(-16px) translateX(8px); }
+    }
+
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-150%) skewX(-20deg); }
+      30%, 100% { transform: translateX(250%) skewX(-20deg); }
+    }
+
+    .animate-avatar-breath { animation: avatarBreath 5s ease-in-out infinite; }
+    .animate-halo-pulse { animation: goldHaloPulse 3.5s ease-in-out infinite; }
+    .animate-twinkle-1 { animation: twinkleSoft 3s ease-in-out infinite; }
+    .animate-twinkle-2 { animation: twinkleSoft 4.2s ease-in-out 1.2s infinite; }
+    .animate-twinkle-3 { animation: twinkleSoft 2.8s ease-in-out 0.6s infinite; }
+    .animate-float { animation: floatSlow 6s ease-in-out infinite; }
+
+    .shimmer-active-layer {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .shimmer-sweep-bar {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 50%;
+      background: linear-gradient(90deg, transparent 0%, rgba(255, 240, 200, 0.4) 45%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 240, 200, 0.4) 55%, transparent 100%);
+      animation: shimmerSweep 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .luxury-card {
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .luxury-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212, 175, 55, 0.55);
+      box-shadow: 0 16px 36px rgba(180, 130, 40, 0.15), 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#fffcf8] via-[#fbf5ee] to-[#f4ebe1] text-[#1d1b1a] min-h-[100dvh] min-h-[100dvh] w-full flex flex-col justify-between items-center relative overflow-x-hidden">
+<!-- Ambient Golden Glows spanning full-bleed viewport -->
+<div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 w-[500px] h-[380px] bg-gradient-to-b from-[#f5dfb8]/50 via-[#faead0]/35 to-transparent rounded-full blur-[90px]"></div>
+<div class="absolute top-[28%] -left-32 w-[400px] h-[380px] bg-gradient-to-tr from-[#edd6b3]/40 via-[#faeedc]/25 to-transparent rounded-full blur-[85px]"></div>
+<div class="absolute top-[48%] -right-28 w-[380px] h-[400px] bg-gradient-to-bl from-[#f2dfbe]/45 via-[#faebd7]/20 to-transparent rounded-full blur-[85px]"></div>
+<div class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-[460px] h-[300px] bg-[#ead9c0]/45 rounded-full blur-[95px]"></div>
+</div>
+<!-- Floating Golden Bokeh & Sparkle Layer -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden select-none -z-5">
+<div class="absolute top-12 left-10 w-2 h-2 rounded-full bg-[#d4af37] shadow-[0_0_10px_#e5a93b] animate-twinkle-1"></div>
+<div class="absolute top-24 right-12 w-2.5 h-2.5 rounded-full bg-[#c5932a] shadow-[0_0_12px_#d4af37] animate-twinkle-2"></div>
+<div class="absolute top-52 left-8 w-1.5 h-1.5 rounded-full bg-[#b8860b] shadow-[0_0_8px_#f59e0b] animate-twinkle-3"></div>
+<div class="absolute top-[40%] right-8 w-2 h-2 rounded-full bg-[#d4af37] shadow-[0_0_10px_#d4af37] animate-twinkle-1"></div>
+<div class="absolute top-[52%] left-10 w-2 h-2 rounded-full bg-[#c5932a]/80 shadow-[0_0_10px_rgba(212,175,55,0.7)] animate-float"></div>
+<div class="absolute bottom-28 left-14 w-2 h-2 rounded-full bg-[#d4af37] shadow-[0_0_10px_#d4af37] animate-twinkle-3"></div>
+<div class="absolute bottom-16 right-12 w-1.5 h-1.5 rounded-full bg-[#b8860b] shadow-[0_0_8px_#b8860b] animate-twinkle-2"></div>
+</div>
+<!-- Main Responsive Container (9:16 optimized, max 420px for mobile canvas) -->
+<main class="w-full max-w-[420px] min-h-[100dvh] flex flex-col justify-center items-center py-6 px-4 box-border relative z-10 pt-safe pb-safe mx-auto gap-4">
+<!-- Top Spacer for vertical balance -->
+<div class="w-full flex justify-center items-center">
+<!-- Decorative miniature crown / sparkle motif -->
+<span class="material-symbols-outlined text-[#b38228]/80 text-[20px] tracking-widest">hotel_class</span>
+</div>
+<!-- 1. Centered Avatar & Typography Section -->
+<section class="w-full flex flex-col items-center text-center pt-1 mb-1"><div class="relative mb-3 flex items-center justify-center"><div class="animate-avatar-breath relative flex items-center justify-center"><div class="absolute -inset-3 rounded-full bg-gradient-to-tr from-[#d4af37] via-[#f7df96] to-[#b8860b] opacity-90 blur-[10px] animate-halo-pulse pointer-events-none"></div><div class="relative p-1 rounded-full bg-gradient-to-b from-[#fae8b8] via-[#d4af37] to-[#966318] shadow-[0_10px_28px_rgba(180,130,40,0.35)]"><div class="p-[2.5px] rounded-full bg-white relative overflow-hidden flex items-center justify-center"><img alt="Minh Quân" class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover block" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA2G_96RLsZvphH97jWQN8uapxnT1oqCpLMtnSaHBKh5xT4C8MPlu7HAamovhPXrEyi_91vQqn89vpfk38Dagpj2tCDo0pxhJ0hTd2MJ1gIE9tI1RHGkEz_kI5XLst-ag4lnSrIA75K5PamE1B4xGX504XAYuEMroF1JGkvYK84XGyHpF4kkzVDKcUmaREcHI7SoYoVkMOdq0YGc_lnMYknUz37DGMvpfpAZHqJLD0TTCxBZI6v4j1MmlATpqXh56ZiA"><div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent pointer-events-none"></div></div></div></div></div><h1 class="font-cinzel text-[26px] sm:text-[30px] leading-tight tracking-[0.16em] uppercase font-extrabold text-luxury-shimmer drop-shadow-[0_2px_14px_rgba(212,175,55,0.35)] mt-1">BIRTHDAY PARTY</h1><p class="font-sans-body text-[13px] sm:text-[14px] tracking-[0.18em] uppercase text-[#6f3800] font-bold mt-1.5">THÂN MỜI GIA ĐÌNH ĐẾN CHUNG VUI</p></section>
+<!-- 2. Cards Section: Time Podium & Event Details -->
+<section class="w-full flex flex-col items-center gap-3.5 pb-1 mt-0.5"><div class="relative w-full bg-gradient-to-b from-white via-[#faf4ea] to-[#f5ebd8] rounded-2xl px-6 py-4 flex flex-col items-center shadow-[0_12px_28px_rgba(164,130,85,0.18),0_2px_8px_rgba(0,0,0,0.04)] border-2 border-[#d4af37]/70 luxury-card overflow-hidden"><div class="shimmer-active-layer"><div class="shimmer-sweep-bar"></div></div><div class="flex items-center gap-2 mb-1 relative z-10"><span class="material-symbols-outlined text-[#8e4e14] text-[20px] font-bold">schedule</span><span class="font-sans-body text-[#6f3800] font-extrabold tracking-[0.18em] uppercase text-[12px] sm:text-[13px]">GIỜ KHAI TIỆC / STARTS AT</span></div><div class="flex items-baseline justify-center gap-2 relative z-10 my-0.5"><span class="font-serif-display text-[44px] sm:text-[48px] leading-none font-bold tracking-tight text-[#1d1b1a]">18:00</span><span class="font-sans-body text-[#8e4e14] font-extrabold tracking-widest text-[16px]">PM</span></div></div><div class="relative w-full bg-white/95 rounded-2xl p-4 sm:p-5 shadow-[0_16px_36px_rgba(164,130,85,0.14),0_4px_14px_rgba(0,0,0,0.03)] backdrop-blur-xl border border-[#e5d2b8] luxury-card overflow-hidden flex flex-col gap-4"><div class="shimmer-active-layer"><div class="shimmer-sweep-bar" style="animation-delay: 2.8s;"></div></div><div class="w-24 h-[2.5px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto shadow-[0_0_8px_#e5a93b]"></div><div class="flex items-center gap-3.5 text-left relative z-10"><div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fae8b8] to-[#edd6b3] flex items-center justify-center shrink-0 shadow-sm border border-[#d4af37]/60"><span class="material-symbols-outlined text-[#6f3800] text-[24px] font-bold">calendar_month</span></div><div class="flex flex-col min-w-0"><span class="font-sans-body text-[#78644e] text-[11.5px] sm:text-[12px] tracking-[0.16em] uppercase font-extrabold">NGÀY TỔ CHỨC / DATE</span><span class="font-sans-body text-[#1d1b1a] font-bold text-[20px] sm:text-[22px] tracking-tight mt-0.5 leading-snug">26/09/2026</span><p class="font-sans-body text-[#534439] text-[14px] sm:text-[15px] font-semibold leading-snug mt-0.5">Thứ Bảy, 26 Tháng 9, 2026</p></div></div><div class="w-full h-px bg-gradient-to-r from-transparent via-[#ebdcc7] to-transparent"></div><div class="flex items-start gap-3.5 text-left relative z-10"><div class="w-12 h-12 rounded-xl bg-gradient-to-br from-[#fae8b8] to-[#edd6b3] flex items-center justify-center shrink-0 shadow-sm border border-[#d4af37]/60 mt-0.5"><span class="material-symbols-outlined text-[#6f3800] text-[24px] font-bold">location_on</span></div><div class="flex flex-col min-w-0"><span class="font-sans-body text-[#78644e] text-[11.5px] sm:text-[12px] tracking-[0.16em] uppercase font-extrabold">ĐỊA ĐIỂM / VENUE</span><span class="font-sans-body text-[#1d1b1a] font-bold text-[20px] sm:text-[22px] tracking-tight mt-0.5 leading-snug">Nhà Bà Út</span><p class="font-sans-body text-[#534439] text-[14px] sm:text-[15px] font-semibold leading-snug mt-0.5">7/11B Chánh Hưng, P. Chánh Hưng</p></div></div></div></section>
+<!-- Bottom Footer Accent -->
+<div class="w-full flex flex-col items-center justify-center pt-1">
+<div class="flex items-center gap-2">
+<span class="h-[1px] w-8 bg-[#d8c2a4]/60"></span>
+<span class="material-symbols-outlined text-[#b38228]/60 text-[14px]">favorite</span>
+<span class="h-[1px] w-8 bg-[#d8c2a4]/60"></span>
+</div>
+</div>
+</main>
+
+
+</body></html>
